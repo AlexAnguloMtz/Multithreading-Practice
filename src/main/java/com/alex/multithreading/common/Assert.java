@@ -21,6 +21,7 @@ public final class Assert {
      * Assert that an array is not empty
      *
      * @param array   the array
+     * @throws EmptyInputException if the tested array is empty
      */
     public static <T> void notEmpty(T[] array) {
         if (isEmpty(array))
