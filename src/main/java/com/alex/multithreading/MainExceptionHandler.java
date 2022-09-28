@@ -23,17 +23,14 @@ class MainExceptionHandler extends AbstractExceptionHandler {
     @Override
     public void handle(Exception exception, UserInterface userInterface) {
 
-        if (exception instanceof EmptyInputException) {
+        if (exception instanceof EmptyInputException)
             exit(() -> userInterface.displayError("Error. No command line arguments found. Program aborted."));
-        }
 
-        else if (exception instanceof NumberFormatException) {
+        else if (exception instanceof NumberFormatException)
             exit(() -> userInterface.displayError("Error. This program accepts integers only. Program aborted."));
-        }
 
-        else if (exception instanceof OutOfRangeException) {
+        else if (exception instanceof OutOfRangeException)
             exit(() -> userInterface.displayError("Error. Only positive integers please. Program aborted."));
-        }
 
         else
             throw new IllegalArgumentException("Could not handle exception", exception);
