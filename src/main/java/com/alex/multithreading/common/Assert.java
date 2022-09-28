@@ -41,9 +41,10 @@ public final class Assert {
 
 
     /**
-     * Assert that all the integers in a Collection<Integer> are greater than certain value
+     * Assert that all the integers in a Collection<Integer> are greater than certain int
      *
      * @param integers the tested integers
+     * @throws OutOfRangeException if any of the integers is not greater than the specified int
      */
     public static void allGreaterThan(int floor, Collection<Integer> integers) {
         integers.forEach(integer -> Assert.isGreaterThan(floor, integer));
