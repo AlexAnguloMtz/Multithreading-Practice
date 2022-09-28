@@ -33,7 +33,7 @@ public final class Assert {
      * @param integer the tested integer
      * @throws OutOfRangeException if the tested integer is not greater than the other number
      */
-    public static void isGreaterThan(int floor, int integer) throws OutOfRangeException {
+    public static void isGreaterThan(int floor, int integer) {
         if (integer <= floor)
             throw new OutOfRangeException();
     }
