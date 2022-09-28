@@ -3,6 +3,7 @@ package com.alex.multithreading.common;
 import com.alex.multithreading.exception.EmptyInputException;
 import com.alex.multithreading.exception.OutOfRangeException;
 
+import java.util.Collection;
 import java.util.List;
 
 import static com.alex.multithreading.common.ArraysUtil.isEmpty;
@@ -39,11 +40,11 @@ public final class Assert {
 
 
     /**
-     * Assert that all the integers of a list are positive
+     * Assert that all the integers in a Collection<Integer> are greater than certain value
      *
      * @param integers the tested integers
      */
-    public static void allGreaterThan(int floor, List<Integer> integers) {
+    public static void allGreaterThan(int floor, Collection<Integer> integers) {
         integers.forEach(integer -> Assert.isGreaterThan(floor, integer));
     }
 }
